@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">Featured Products</h1>
+    <div class="row">
+        <!-- Product 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title">Product 1</h5>
+                    <p class="card-text">$19.99</p>
+                    <a href="@Url.Action("ProductDetails", "Home", new { id = 1 })" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title">Product 2</h5>
+                    <p class="card-text">$29.99</p>
+                    <a href="@Url.Action("ProductDetails", "Home", new { id = 2 })" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title">Product 3</h5>
+                    <p class="card-text">$39.99</p>
+                    <a href="@Url.Action("ProductDetails", "Home", new { id = 3 })" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

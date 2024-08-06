@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - _</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/_.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">_</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                         <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Cart", "Home")">Cart</a>
+                    
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+ <footer class="footer bg-dark text-white py-3">
+        <div class="container">
+            <div class="row">
+                <!-- Column 1: Site Links -->
+                <div class="col-md-4">
+                    <h5>Site Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="@Url.Action("Index", "Home")" class="text-white">Home</a></li>
+                        <li><a href="@Url.Action("About", "Home")" class="text-white">About</a></li>
+                        <li><a href="@Url.Action("Contact", "Home")" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Column 2: Contact Information -->
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li>1234 Main St</li>
+                        <li>City, State, 56789</li>
+                        <li>Email: <a href="mailto:info@example.com" class="text-white">info@example.com</a></li>
+                        <li>Phone: (123) 456-7890</li>
+                    </ul>
+                </div>
+                <!-- Column 3: Social Media Links -->
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <a href="https://facebook.com" class="text-white mr-3" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" class="text-white mr-3" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" class="text-white" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
